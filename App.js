@@ -5,12 +5,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      textoFrase: '',
-      img: require('./src/biscoito.png')
+      textoFrase: "",
+      img: require("./src/biscoito.png"),
     };
 
     this.quebraBiscoito = this.quebraBiscoito.bind(this);
-    
+
     this.frases = [
       "A vida trará coisas boas se tiveres paciência.",
       "Demonstre amor e alegria em todas as oportunidades e verás que a paz nasce dentro de você.",
@@ -26,14 +26,13 @@ class App extends Component {
     ];
   }
 
-  quebraBiscoito(){
-    let  numeroAleatorio = Math.floor(Math.random() * this.frases.length )
+  quebraBiscoito() {
+    let numeroAleatorio = Math.floor(Math.random() * this.frases.length);
 
     this.setState({
       textoFrase: this.frases[numeroAleatorio],
-      img: require('./src/biscoitoAberto.png')
-    })
-
+      img: require("./src/biscoitoAberto.png"),
+    });
   }
 
   render() {
